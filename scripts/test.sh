@@ -1,0 +1,1 @@
+mocha -w -r ts-node/register "src/**/test/**/*.ts"
