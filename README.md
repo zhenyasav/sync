@@ -5,6 +5,8 @@
 
 The goal is to ensure all files in the source are represented at least once somewhere in the destination.
 
+File identity is established trivially using the filename and size.
+
 ## Usage
 - Clone this repo `git clone https://github.com/zhenyasav/sync`
 - `cd sync` into the directory
