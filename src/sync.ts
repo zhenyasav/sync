@@ -74,7 +74,7 @@ export class Sync {
       name,
       directory,
       baseDirectory,
-      relativeDirectory: directory.replace(baseDirectory + '/', ''),
+      relativeDirectory: directory.replace(baseDirectory, ''),
       path: filePath,
       size: fileStats.size
     };
@@ -103,12 +103,12 @@ export class Sync {
     return files.map((d) => {
       return {
         source: d.path,
-        dest: path.resolve(dest, d.relativeDirectory, d.name)
+        dest: path.join(dest, d.relativeDirectory, d.name)
       }
     });
   }
   prettyPrintMissingFile(file: FileDescriptor) {
-    console.log(`missing ${file.name} from .../${file.relativeDirectory}`);
+    console.log(`missing ${file.name} from ${file.relativeDirectory || '/'}`);
   }
   async runCopyOperations(operations: CopyDescriptor[]) {
     const prog = new Progress(":bar :current/:total (:percent) eta :etas", {
