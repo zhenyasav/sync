@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "start": "scripts/start.sh",
+    "dry": "scripts/dry.sh",
     "test": "scripts/test.sh"
   },
   "author": "",

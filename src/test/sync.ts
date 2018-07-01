@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import { getConfiguration, Sync } from "../main";
+import { getConfiguration, Sync } from "../sync";
 import * as path from "path";
 
 const testConfig = path.resolve(__dirname, "../../test.json");

@@ -1,6 +1,6 @@
 {
-  "source": "",
-  "dest": "",
+  "source": "./src/test/fixtures/source",
+  "dest": "./src/test/fixtures/dest",
   "ignore": [
     ".DS_Store"
   ]
